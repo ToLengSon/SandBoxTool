@@ -13,9 +13,10 @@
 + (void)executeCommand:(NSString *)command
                 handle:(void (^)(NSString *path))handle {
     
-    system([NSString stringWithFormat:@"echo `%@` > tmp.dat", command].UTF8String);
-    handle(@"tmp.dat");
-    system("rm tmp.dat");
+    NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:@"tmp.dat"];
+    system([NSString stringWithFormat:@"%@ > %@", command, path].UTF8String);
+    handle(path);
+    system([NSString stringWithFormat:@"rm %@", path].UTF8String);
 }
 
 @end

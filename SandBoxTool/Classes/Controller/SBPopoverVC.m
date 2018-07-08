@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(outlineViewSelectionDidChange:)
                                                  name:NSOutlineViewSelectionDidChangeNotification
@@ -116,7 +116,6 @@
         NSDictionary *simulatorListSet = [NSJSONSerialization JSONObjectWithData:data
                                                                          options:NSJSONReadingMutableLeaves
                                                                            error:nil][@"devices"];
-        
         _simulatorList = [NSMutableArray array];
         
         for (NSString *simulatorListKey in simulatorListSet) {
