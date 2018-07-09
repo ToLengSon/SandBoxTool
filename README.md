@@ -34,7 +34,7 @@
    2. 使用NSPopover创建气泡视图(类似iPad开发中的UIPopoverPresentationController)，我们的交互控件都添加至NSPopover的控制器中
    3. NSPopover中由NSOutlineView、刷新按钮与关闭按钮组成
    4. 删除window，设置NSApplication的delegate
-2. 将标准输出流重定向至一临时的文本文件(可以使用C语言的freopen函数，也可以使用Unix的dup2函数，这里使用的是echo命令)
+2. 将标准输出流重定向至一临时的文本文件(可以使用C语言的freopen函数，也可以使用Unix的dup2函数，这里使用的是 > 命令)
 3. xcrun simctl list --json 获取模拟器列表并格式化为json文件，在工程配置中关闭沙盒机制(如不关闭，无权限访问沙盒以外目录或文件)
 4. 筛选state字段为Booted的模拟器，使用xcrun simctl listapps udid获取模拟器所安装的app列表
 5. 监听点击事件，使用open命令打开相应的沙盒目录

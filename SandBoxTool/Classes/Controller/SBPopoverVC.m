@@ -119,10 +119,8 @@
         _simulatorList = [NSMutableArray array];
         
         for (NSString *simulatorListKey in simulatorListSet) {
-            
-            if ([simulatorListKey.lowercaseString hasPrefix:@"ios"] &&
-                [simulatorListSet[simulatorListKey] count] > 0) {
-                
+
+            if ([simulatorListKey.lowercaseString hasPrefix:@"ios"]) {
                 for (NSDictionary *simulatorDict in simulatorListSet[simulatorListKey]) {
                     if ([simulatorDict[@"state"] caseInsensitiveCompare:@"booted"] == NSOrderedSame) {
                         SBSimulator *simulator = [SBSimulator simulatorWithDict:simulatorDict];
