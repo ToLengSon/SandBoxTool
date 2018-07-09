@@ -92,7 +92,7 @@
 }
 
 - (IBAction)reload:(id)sender {
-    _simulatorList = nil;
+    _simulatorList = nil; 
     [self.outlineView reloadData];
 }
 
