@@ -10,6 +10,7 @@
 #import "SBSimulator.h"
 #import "SBApp.h"
 #import "SBTools.h"
+#import "SBLabel.h"
 
 @interface SBPopoverVC ()
 <NSOutlineViewDataSource, NSOutlineViewDelegate>
@@ -18,7 +19,7 @@
 
 @property (nonatomic, strong) NSMutableArray<SBSimulator *> *simulatorList;
 
-@property (weak) IBOutlet NSView *emptyView;
+@property (weak) IBOutlet SBLabel *tipLabel;
 
 @end
 
@@ -62,8 +63,22 @@
     if ([item isKindOfClass:[SBSimulator class]]) {
         return ((SBSimulator *)item).appList.count;
     } else {
-        self.emptyView.hidden = self.simulatorList.count > 0;
-        return self.simulatorList.count;
+        __block BOOL isSet = YES;
+        [SBTools executeCommand:@"xcode-select -p"
+                         handle:^(NSString *path) {
+                             isSet = ![[[NSString stringWithContentsOfFile:path
+                                                                  encoding:NSUTF8StringEncoding
+                                                                     error:nil] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] hasSuffix:@"CommandLineTools"];
+                         }];
+        
+        if (isSet) {
+            self.tipLabel.text = @"请启动模拟器";
+            self.tipLabel.hidden = self.simulatorList.count > 0;
+            return self.simulatorList.count;
+        } else {
+            self.tipLabel.text = @"请设置Xcode命令：Xcode -> Preferences -> locations -> Command Line Tools";
+            return 0;
+        }
     }
 }
 
@@ -92,7 +107,7 @@
 }
 
 - (IBAction)reload:(id)sender {
-    _simulatorList = nil; 
+    _simulatorList = nil;
     [self.outlineView reloadData];
 }
 
@@ -119,7 +134,7 @@
         _simulatorList = [NSMutableArray array];
         
         for (NSString *simulatorListKey in simulatorListSet) {
-
+            
             if ([simulatorListKey.lowercaseString hasPrefix:@"ios"]) {
                 for (NSDictionary *simulatorDict in simulatorListSet[simulatorListKey]) {
                     if ([simulatorDict[@"state"] caseInsensitiveCompare:@"booted"] == NSOrderedSame) {

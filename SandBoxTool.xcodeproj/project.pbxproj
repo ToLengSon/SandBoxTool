@@ -14,7 +14,7 @@
 		8A1270CD20F10FAA003946BF /* SBPopoverVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A1270BF20F10FAA003946BF /* SBPopoverVC.xib */; };
 		8A1270CE20F10FAA003946BF /* SBSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1270C320F10FAA003946BF /* SBSimulator.m */; };
 		8A1270CF20F10FAA003946BF /* SBApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1270C520F10FAA003946BF /* SBApp.m */; };
-		8A1270D020F10FAA003946BF /* SBEmptyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1270C720F10FAA003946BF /* SBEmptyLabel.m */; };
+		8A1270D020F10FAA003946BF /* SBLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A1270C720F10FAA003946BF /* SBLabel.m */; };
 		8A348A57206A17FE00E78069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A348A56206A17FE00E78069 /* Assets.xcassets */; };
 		8A348A5A206A17FE00E78069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A348A58206A17FE00E78069 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -32,8 +32,8 @@
 		8A1270C320F10FAA003946BF /* SBSimulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSimulator.m; sourceTree = "<group>"; };
 		8A1270C420F10FAA003946BF /* SBSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSimulator.h; sourceTree = "<group>"; };
 		8A1270C520F10FAA003946BF /* SBApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBApp.m; sourceTree = "<group>"; };
-		8A1270C720F10FAA003946BF /* SBEmptyLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBEmptyLabel.m; sourceTree = "<group>"; };
-		8A1270C820F10FAA003946BF /* SBEmptyLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBEmptyLabel.h; sourceTree = "<group>"; };
+		8A1270C720F10FAA003946BF /* SBLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBLabel.m; sourceTree = "<group>"; };
+		8A1270C820F10FAA003946BF /* SBLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBLabel.h; sourceTree = "<group>"; };
 		8A348A4D206A17FE00E78069 /* SandBoxTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SandBoxTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A348A56206A17FE00E78069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A348A59206A17FE00E78069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 		8A1270C620F10FAA003946BF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8A1270C820F10FAA003946BF /* SBEmptyLabel.h */,
-				8A1270C720F10FAA003946BF /* SBEmptyLabel.m */,
+				8A1270C820F10FAA003946BF /* SBLabel.h */,
+				8A1270C720F10FAA003946BF /* SBLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,7 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A1270D020F10FAA003946BF /* SBEmptyLabel.m in Sources */,
+				8A1270D020F10FAA003946BF /* SBLabel.m in Sources */,
 				8A1270CF20F10FAA003946BF /* SBApp.m in Sources */,
 				8A1270CA20F10FAA003946BF /* main.m in Sources */,
 				8A1270CC20F10FAA003946BF /* SBPopoverVC.m in Sources */,

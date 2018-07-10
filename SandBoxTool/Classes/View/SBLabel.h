@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface SBEmptyLabel : NSView
+@interface SBLabel : NSView
+
+@property (nonatomic, copy) NSString *text;
 
 @end
