@@ -14,10 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SBSimulator : NSObject
 
+/** 设备名称 */
 @property (copy) NSString *name;
-
+/** 设备标识 */
 @property (copy) NSString *udid;
-
+/** 系统版本 */
 @property (copy) NSString *systemVersion;
 
 /** app列表 */

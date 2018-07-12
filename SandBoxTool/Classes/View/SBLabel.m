@@ -19,8 +19,9 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
+    /** 判断是否是夜间模式 */
     BOOL isNight = [[NSAppearance currentAppearance].name isEqualToString:NSAppearanceNameVibrantDark];
-   
+    
     NSDictionary *attris = @{NSFontAttributeName : [NSFont systemFontOfSize:17],
                              NSForegroundColorAttributeName : isNight? [NSColor whiteColor] : [NSColor blackColor]};
     CGSize size = [self.text boundingRectWithSize:NSMakeSize(dirtyRect.size.width, CGFLOAT_MAX)

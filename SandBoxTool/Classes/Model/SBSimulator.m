@@ -25,9 +25,9 @@
 
 - (NSArray<SBApp *> *)appList {
     if (_appList == nil) {
-        // 根据udid获取所安装的app列表
-        __block NSDictionary *appDictList = nil;
         
+        __block NSDictionary *appDictList = nil;
+        // 获取指定设备上的app列表
         [SBTools executeCommand:[NSString stringWithFormat:@"xcrun simctl listapps %@", self.udid]
                          handle:^(NSString *path) {
                              appDictList = [NSDictionary dictionaryWithContentsOfFile:path];
@@ -36,7 +36,7 @@
         NSMutableArray *appList = [NSMutableArray array];
         
         for (NSString *key in appDictList) {
-            // 如果是用户应用
+            // 只获取用户应用
             if ([appDictList[key][@"ApplicationType"] caseInsensitiveCompare:@"user"] == NSOrderedSame) {
                 [appList addObject:[SBApp appWithDict:appDictList[key]]];
             }

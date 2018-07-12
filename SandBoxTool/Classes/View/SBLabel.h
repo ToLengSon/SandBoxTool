@@ -10,6 +10,7 @@
 
 @interface SBLabel : NSView
 
+/** 需要显示的文本 */
 @property (nonatomic, copy) NSString *text;
 
 @end

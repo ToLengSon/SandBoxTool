@@ -12,10 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SBApp : NSObject
 
+/** app名称 */
 @property (copy) NSString *name;
-
+/** app标识 */
 @property (copy) NSString *bundleId;
-
+/** 沙盒目录 */
 @property (copy) NSString *sandBoxPath;
 
 + (instancetype)appWithDict:(NSDictionary *)dict;
