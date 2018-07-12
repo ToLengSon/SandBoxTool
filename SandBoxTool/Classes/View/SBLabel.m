@@ -19,7 +19,10 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
-    NSDictionary *attris = @{NSFontAttributeName : [NSFont systemFontOfSize:17]};
+    BOOL isNight = [[NSAppearance currentAppearance].name isEqualToString:NSAppearanceNameVibrantDark];
+   
+    NSDictionary *attris = @{NSFontAttributeName : [NSFont systemFontOfSize:17],
+                             NSForegroundColorAttributeName : isNight? [NSColor whiteColor] : [NSColor blackColor]};
     CGSize size = [self.text boundingRectWithSize:NSMakeSize(dirtyRect.size.width, CGFLOAT_MAX)
                                           options:NSStringDrawingUsesLineFragmentOrigin
                                        attributes:attris].size;
