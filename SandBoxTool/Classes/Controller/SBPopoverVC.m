@@ -146,7 +146,7 @@
         
         for (NSString *simulatorListKey in simulatorListSet) {
             
-            if ([simulatorListKey.lowercaseString hasPrefix:@"ios"]) {
+            if ([simulatorListKey.lowercaseString containsString:@"ios"]) {
                 for (NSDictionary *simulatorDict in simulatorListSet[simulatorListKey]) {
                     // 只获取启动的模拟器，因为之后的命令要求模拟器是启动状态
                     if ([simulatorDict[@"state"] caseInsensitiveCompare:@"booted"] == NSOrderedSame) {
