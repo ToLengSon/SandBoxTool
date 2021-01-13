@@ -1,12 +1,12 @@
 ### 实现效果展示
 
-1. 未启动模拟器   ![](https://tva1.sinaimg.cn/large/008eGmZEgy1gmltcurxmoj30fc0h0t9a.jpg) 
+1. 未启动模拟器
 
-2. 启动模拟器后，点击刷新   ![](https://tva1.sinaimg.cn/large/008eGmZEgy1gmltcurxmoj30fc0h0t9a.jpg)
+2. 启动模拟器后，点击刷新
 
-3. 选中对应app的cell，跳转至沙盒文件夹   ![沙盒文件夹](https://tva1.sinaimg.cn/large/008eGmZEgy1gmltcurxmoj30fc0h0t9a.jpg)
+3. 选中对应app的cell，跳转至沙盒文件夹
 
-   ​    
+
 ### 沙盒目录简介
 
 1. Documents 目录：您应该将所有的应用程序数据文件写入到这个目录下。这个目录用于存储用户数据。该路径可通过配置实现iTunes共享文件。可被iTunes备份。 
