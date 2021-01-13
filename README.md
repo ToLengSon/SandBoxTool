@@ -1,6 +1,6 @@
 ### 实现效果展示
 
-1. 未启动模拟器   ![](https://ws4.sinaimg.cn/large/006tKfTcgy1ft1pvtridbj302s036wed.jpg) 
+1. 未启动模拟器   ![](https://tva1.sinaimg.cn/large/008eGmZEgy1gmltcurxmoj30fc0h0t9a.jpg) 
 
 2. 启动模拟器后，点击刷新   ![](https://ws1.sinaimg.cn/large/006tKfTcgy1ft1py3xhpfj302s033wed.jpg)
 
